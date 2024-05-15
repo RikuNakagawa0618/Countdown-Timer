@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Timer from './Timer';
+import TimerForm from './TimerForm';
+import "./App.css";
 
 function App() {
+  const [duration, setDuration] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
+
+  const startTimer = (seconds) => {
+    setDuration(seconds);
+    setIsRunning(true);
+  }
+
+  const resetTimer = () => {
+    setDuration(0);
+    setIsRunning(false);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Countdown Timer</h1>
+      <TimerForm startTimer={startTimer} />
+      { isRunning && <Timer duration={duration} resetTimer={resetTimer} />}
     </div>
   );
 }

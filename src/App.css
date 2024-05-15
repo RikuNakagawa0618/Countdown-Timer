@@ -1,5 +1,24 @@
+.budy {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .App {
   text-align: center;
+  margin-top: 50px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .App-logo {
@@ -35,4 +54,66 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.input {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  line-height: 2;
+  font-size: 16px;
+  width: 200px;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  line-height: 1.5;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.button:active {
+  background-color: #004080;
+} 
+
+.preset-buttons {
+  margin-bottom: 20px;
+}
+
+.preset-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.preset-button:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.preset-button:active {
+  background-color: #1e7e34;
 }
